@@ -31,7 +31,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kaoriel\\Vkelips\\Providers\\EloquentFilterServiceProvider"
+                "Kaoriel\\Vkelips\\Providers\\VkElipsServiceProvider"
             ]
         }
     },
