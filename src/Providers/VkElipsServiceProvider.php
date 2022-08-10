@@ -12,11 +12,7 @@ class VkElipsServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
 
             $this->publishes([
-                __DIR__ . '/../../config/example.php' => config_path('vkelips.php'),
-            ]);
-
-            $this->commands([
-                VkElipsCommand::class,
+                __DIR__ . '/../../config/vkelips.php' => config_path('vkelips.php'),
             ]);
         }
     }
