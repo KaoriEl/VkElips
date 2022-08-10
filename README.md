@@ -12,7 +12,7 @@ composer require kaoriel/vkelips
 > after you installed the package using composer, you need to publish the necessary files and configs
 
 `
-php artisan vendor:publish --provider=" Kaoriel\Vkelips\Providers\VkElipsServiceProvider\"
+php artisan vendor:publish --provider=" Kaoriel\Vkelips\Providers\VkElipsServiceProvider"
 `
 
 >You will create a config in the app/config folder
