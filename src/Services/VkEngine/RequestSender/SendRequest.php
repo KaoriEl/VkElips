@@ -7,6 +7,7 @@ use Illuminate\Http\Client\HttpClientException;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use SebastianBergmann\Environment\Console;
 
 class SendRequest implements SendRequestContract
 {
@@ -16,8 +17,8 @@ class SendRequest implements SendRequestContract
         try {
             $response = Http::get($url);
         } catch (HttpClientException $e) {
-            $response = "Не удалось отправить сообщение";
-            Log::error("Не удалось отправить сообщение: ", (array)$e);
+            $response = "Не удалось отправить сообщение: ";
+            error_log($response);
         }
         return $response;
     }
