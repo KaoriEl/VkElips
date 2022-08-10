@@ -13,7 +13,6 @@ class SendMessageCarousel implements SendApiContract
     {
         $frameApi = (new Builders())->ApiFrameBuilder("messages.send");
         $api = (new Builders())->AddParamsToFrameBuilder($params, $frameApi);
-        Log::debug($api->url);
         return (new SendRequest())->getRequest($api->url);
     }
 }
