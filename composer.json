@@ -1,0 +1,43 @@
+{
+    "name": "kaoriel/vkelips",
+    "description": "Wrapper for VK api, which makes it more convenient to work with VK bots",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kaoriel\\Vkelips\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rostislav Krivets",
+            "email": "krivets.rostislav@yandex.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "orchestra/testbench": "8.0.x-dev",
+        "phpunit/phpunit": "^9.5.10",
+        "illuminate/database": "^9.0",
+        "illuminate/support": "^9.0",
+        "illuminate/console": "^9.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kaoriel\\Vkelips\\Test\\": "tests/"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kaoriel\\Vkelips\\Providers\\EloquentFilterServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/phpunit"
+        ]
+    }
+}
