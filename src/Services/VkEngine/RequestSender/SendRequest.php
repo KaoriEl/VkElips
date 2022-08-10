@@ -19,7 +19,7 @@ class SendRequest implements SendRequestContract
         } catch (HttpClientException $e) {
             $response = "Не удалось отправить сообщение: ";
             Log::error($response, (array)$e);
-            error_log($response . $e->getMessage());
+            error_log($response . "\n Message: " . $e->getMessage() . "\n" . "Trace: " . $e->getTraceAsString());
         }
         return $response;
     }
